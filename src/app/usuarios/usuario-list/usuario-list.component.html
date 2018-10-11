@@ -1,0 +1,15 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let usuario of usuarioService.usuarioList">      
+      <td>{{usuario.NOMBRE}}</td>
+      <td>{{usuario.EMAIL}}</td>
+      <td>{{usuario.PASSWORD}}</td>
+      <td>
+          <a class="btn" (click)="showForEdit(usuario)">
+              <i class="fa fa-pencil-square-o"></i>
+            </a>
+            <a class="btn text-danger" (click)="onDelete(usuario.ID)">
+              <i class="fa fa-trash-o"></i>
+            </a>
+      </td>
+  </tr>
+</table>
